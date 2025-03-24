@@ -1,6 +1,6 @@
 {
   "name": "flash_create",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Flash CLI for creating React projects preconfigured with Tailwind, Shadcn, Redux, React-Router-Dom",
   "bin": {
     "flash": "./bin/index.js"
