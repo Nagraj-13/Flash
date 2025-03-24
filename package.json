@@ -1,5 +1,5 @@
 {
-  "name": "flash",
+  "name": "@nagraj-13/flash",
   "version": "1.0.0",
   "description": "Flash CLI for creating React projects preconfigured with Tailwind, Shadcn, Redux, React-Router-Dom",
   "bin": {
