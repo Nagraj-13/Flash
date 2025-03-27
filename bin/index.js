@@ -96,9 +96,11 @@ const setupProject = async () => {
   console.log(chalk.yellow(`\n\n👉 Next steps:\n  cd ${projectName}\n  npm run dev`));
   if(template === "backend") {
     console.log(chalk.yellow(`  create a .env file in the root directory and add the following variables:\n  PORT=5000\n  MONGO_URL=your_mongo_uri   \nCORS_ORIGIN='*'`));
+  }else{
+    console.log(chalk.blue("🚀 Starting development server..."));
+    runCommand("npm run dev");
   }
-  console.log(chalk.blue("🚀 Starting development server..."));
-  runCommand("npm run dev");
+
 };
 
 setupProject();
