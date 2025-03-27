@@ -12,6 +12,7 @@ const repoBase = "Nagraj-13/Flash_Templates";
 const repoPaths = {
   ts: "TS_Template",
   js: "JS_Template",
+  backend: "Server_Template",
 };
 
 // Display ASCII banner
@@ -55,6 +56,7 @@ const promptUser = async () => {
       choices: [
         { name: "💙 TypeScript", value: "ts" },
         { name: "💛 JavaScript", value: "js" },
+        { name: "🤍 Backend", value: "backend" },
       ],
     },
   ]);
@@ -92,7 +94,9 @@ const setupProject = async () => {
 
   console.log(chalk.green("🎉 Project setup complete!"));
   console.log(chalk.yellow(`\n\n👉 Next steps:\n  cd ${projectName}\n  npm run dev`));
-
+  if(template === "backend") {
+    console.log(chalk.yellow(`  create a .env file in the root directory and add the following variables:\n  PORT=5000\n  MONGO_URL=your_mongo_uri   \nCORS_ORIGIN='*'`));
+  }
   console.log(chalk.blue("🚀 Starting development server..."));
   runCommand("npm run dev");
 };
